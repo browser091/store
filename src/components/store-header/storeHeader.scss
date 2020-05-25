@@ -1,0 +1,22 @@
+.store-header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    font-family: "Playfair Display SC", serif;
+    font-size: 38px;
+    padding-left: 16px;
+  }
+
+  .shopping-cart {
+    align-self: center;
+    font-size: 20px;
+    padding-right: 16px;
+    .cart-icon {
+      font-size: 32px;
+      color: cadetblue;
+      margin-right: 10px;
+    }
+  }
+}
