@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./book-list-item.scss";
 
-const BookListItem = ({ book }) => {
+const BookListItem = ({ book, onAddedToCart }) => {
   const { title, author, price, coverImage } = book;
   return (
     <div className="book-list-item">
       <div className="book-cover">
-        <img src={coverImage} />
+        <img src={coverImage} alt="coverImage" />
       </div>
       <div className="book-details">
         <a href="#" className="book-title">
@@ -14,7 +14,9 @@ const BookListItem = ({ book }) => {
         </a>
         <div className="book-author">{author}</div>
         <div className="book-price">${price}</div>
-        <button className="btn btn-info add-to-cart">Добавить в корзину</button>
+        <button onClick={onAddedToCart} className="btn btn-warning add-to-cart">
+          В корзину
+        </button>
       </div>
     </div>
   );
