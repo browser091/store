@@ -66,24 +66,16 @@ const ShoppingCartTable = ({
   );
 };
 
-const mapStateToProps = ({ cartItems, orderTotal }) => {
+const mapStateToProps = ({ shoppingCart: { cartItems, orderTotal } }) => {
   return {
     items: cartItems,
     total: orderTotal,
   };
 };
-const mapDispatchToProps = () => {
-  return {
-    onIncrease: (id) => {
-      console.log(`inc ${id}`);
-    },
-    onDecrease: (id) => {
-      console.log(`dec ${id}`);
-    },
-    onDelete: (id) => {
-      console.log(`del ${id}`);
-    },
-  };
+const mapDispatchToProps = {
+  onIncrease: bookAddedToCart,
+  onDecrease: bookRemovedFromCart,
+  onDelete: allBooksRemovedFromCart,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);

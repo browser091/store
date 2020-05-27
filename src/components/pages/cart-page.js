@@ -1,7 +1,7 @@
-import React from 'react'
-
+import React from "react";
+import ShoppingCartTable from "../shopping-cart-table/shopping-cart-table";
 
 const CartPage = () => {
-    return <div>Cart Paage</div>
-}
-export default CartPage
+  return <ShoppingCartTable />;
+};
+export default CartPage;

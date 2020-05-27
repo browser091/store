@@ -22,7 +22,7 @@ export default class BookstoreService {
       setTimeout(() => {
         resolve(this.data);
         reject(new Error("something bad happened"));
-      }, 1000);
+      }, 2000);
     });
   }
 }

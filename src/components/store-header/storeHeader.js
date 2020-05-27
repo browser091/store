@@ -12,9 +12,8 @@ const StoreHeader = ({ numItems, total }) => {
       </Link>
       <Link to="/cart">
         <div className="shopping-cart">
-          <i className="cart-icon fa fa-shopping-cart" /> {numItems}{" "}
-          товар-(а/ов) ($
-          {total})
+          <i className="cart-icon fa fa-shopping-cart" /> {numItems}
+          товар-(а/ов) (${total})
         </div>
       </Link>
     </header>
